@@ -30,3 +30,6 @@ DELETE FROM usuarios
 WHERE (nome = 'jeferson') and (papel = 'user') and (id = 3);
 
 SELECT * FROM usuarios;
+
+SELECT count(*)
+FROM usuarios;
