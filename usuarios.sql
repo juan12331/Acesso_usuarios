@@ -7,3 +7,6 @@ CREATE TABLE usuarios (
     nome VARCHAR(100) NOT NULL,
     senha VARCHAR(45) NOT NULL
 );
+
+ALTER TABLE usuarios
+ADD email VARCHAR(100) NOT NULL;
