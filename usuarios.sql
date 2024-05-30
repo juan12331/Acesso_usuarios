@@ -33,3 +33,22 @@ SELECT * FROM usuarios;
 
 SELECT count(*)
 FROM usuarios;
+
+INSERT INTO usuarios (nome, senha, email) VALUES 
+('Maria', 'senha1', 'maria@example.com'),
+('Pedro', 'senha2', 'pedro@example.com'),
+('Ana', 'senha3', 'ana@example.com'),
+('Carlos', 'senha4', 'carlos@example.com'),
+('Laura', 'senha5', 'laura@example.com'),
+('Luiz', 'senha6', 'luiz@example.com'),
+('Julia', 'senha7', 'julia@example.com'),
+('Gabriel', 'senha8', 'gabriel@example.com'),
+('Fernanda', 'senha9', 'fernanda@example.com'),
+('Rafael', 'senha10', 'rafael@example.com');
+
+
+SELECT * FROM usuarios 
+WHERE nome LIKE '%U%'; -- pega todos os usuarios que contenham a letra U no nome
+
+SELECT * FROM usuarios 
+WHERE nome LIKE 'J%'; -- pega todos os usuarios que começam com J
