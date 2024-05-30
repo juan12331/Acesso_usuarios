@@ -13,3 +13,5 @@ ADD email VARCHAR(100) NOT NULL;
 
 ALTER TABLE usuarios
 ADD papel ENUM('user', 'adm') NOT NULL DEFAULT 'user';
+
+INSERT INTO usuarios(nome, senha, email) VALUES ('juan', '17897', 'email@example.com');
