@@ -19,3 +19,7 @@ INSERT INTO usuarios(nome, senha, email) VALUES ('kauã', '12345', 'email@kaua.c
 INSERT INTO usuarios(nome, senha, email) VALUES ('jeferson', 'jerferson', 'jeferson@example.com');
 
 SELECT * FROM usuarios
+
+UPDATE usuarios
+SET papel = 'adm'
+WHERE nome = 'juan';
