@@ -18,10 +18,15 @@ INSERT INTO usuarios(nome, senha, email) VALUES ('juan', '17897', 'email@example
 INSERT INTO usuarios(nome, senha, email) VALUES ('kauã', '12345', 'email@kaua.com');
 INSERT INTO usuarios(nome, senha, email) VALUES ('jeferson', 'jerferson', 'jeferson@example.com');
 
-SELECT * FROM usuarios
+SELECT * FROM usuarios;
 
 UPDATE usuarios
 SET papel = 'adm'
 WHERE nome = 'juan';
 
-SELECT * FROM usuarios WHERE papel = 'adm'
+SELECT * FROM usuarios WHERE papel = 'adm';
+
+DELETE FROM usuarios
+WHERE (nome = 'jeferson') and (papel = 'user') and (id = 3);
+
+SELECT * FROM usuarios;
