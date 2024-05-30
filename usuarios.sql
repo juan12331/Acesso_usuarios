@@ -23,3 +23,5 @@ SELECT * FROM usuarios
 UPDATE usuarios
 SET papel = 'adm'
 WHERE nome = 'juan';
+
+SELECT * FROM usuarios WHERE papel = 'adm'
