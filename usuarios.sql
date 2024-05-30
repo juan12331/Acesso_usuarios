@@ -63,3 +63,9 @@ ORDER BY nome DESC; -- selecionando usuarios por ordem alfabética decresente
 
 SELECT * FROM usuarios 
 WHERE senha in ('senha10', 'senha1', 'ajkdsakjdnasjkdnask');  -- não vai pegar ajkdsakjdnasjkdnask pois não existe senha assim
+
+
+SELECT * FROM usuarios 
+WHERE papel = 'user' 
+ORDER BY nome DESC 
+LIMIT 5; -- mostra no maximo 5 itens (LIMIT)
