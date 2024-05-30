@@ -52,3 +52,10 @@ WHERE nome LIKE '%U%'; -- pega todos os usuarios que contenham a letra U no nome
 
 SELECT * FROM usuarios 
 WHERE nome LIKE 'J%'; -- pega todos os usuarios que começam com J
+
+SELECT * FROM usuarios 
+ORDER BY nome;  -- selecionando usuarios por ordem alfabética
+
+SELECT * FROM usuarios 
+ORDER BY nome DESC; -- selecionando usuarios por ordem alfabética decresente
+-- para usar em ordem crescente é só usar ASC
