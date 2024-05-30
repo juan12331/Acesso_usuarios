@@ -59,3 +59,7 @@ ORDER BY nome;  -- selecionando usuarios por ordem alfabética
 SELECT * FROM usuarios 
 ORDER BY nome DESC; -- selecionando usuarios por ordem alfabética decresente
 -- para usar em ordem crescente é só usar ASC
+
+
+SELECT * FROM usuarios 
+WHERE senha in ('senha10', 'senha1', 'ajkdsakjdnasjkdnask');  -- não vai pegar ajkdsakjdnasjkdnask pois não existe senha assim
