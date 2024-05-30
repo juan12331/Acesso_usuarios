@@ -10,3 +10,6 @@ CREATE TABLE usuarios (
 
 ALTER TABLE usuarios
 ADD email VARCHAR(100) NOT NULL;
+
+ALTER TABLE usuarios
+ADD papel VARCHAR(4) NOT NULL DEFAULT "user";
