@@ -1,4 +1,7 @@
-const express = require("express");
-const sequelize = require("./config/sequelize");
-const router = require("./routes/router");
-require("dotenv").config();
+
+
+(async () => {
+    const Usuarios = require('./config/Usuarios')
+    await Usuarios.sync();
+})();
+  
