@@ -6,10 +6,8 @@
     await sequelize.sync(); //O sync verifica se existe uma tabela Usuarios no banco de dados e se não existir ele cria uma com as informações de usuarios
 
 
-    const novoUsuario = await Usuarios.create({
-        nome: 'juan',
-        email: 'juan1402@gmail.com',
-        senha: 'uncknow-password'
-})
+    
+        const usuarios = await Usuarios.findAll({ where: {nome: 'jeferson'}})
+        console.log(usuarios)
 })();
   
