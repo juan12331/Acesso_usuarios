@@ -7,7 +7,9 @@
 
 
     
-        const usuarios = await Usuarios.findAll({ where: {nome: 'jeferson'}})
+        const usuarios = await sequelize.findAll({ where: {nome: 'jeferson'}})
         console.log(usuarios)
+        usuarios.senha = '123456'
+        usuarios.save()     
 })();
   
