@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const database = require('./sequelize')
+const database = require('../config/sequelize')
 const { default_type } = require('mime')
 
 const usuarios = database.define('usuarios', {
