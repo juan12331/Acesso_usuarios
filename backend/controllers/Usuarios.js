@@ -20,12 +20,10 @@ exports.createUsuario = async (req, res) => {
 
 exports.deleteUsuario = async (req, res) => {
     const encontrarUsuario = await Usuarios.findOne({ where: {id: req.params.id}})
-    res.send(encontrarUsuario);
     try{
     await encontrarUsuario.destroy();
+    return res.send('usuario deletado')
     } catch (error) {
-        console.log('deu erro aqui fi', error)
-    } finally {
-    return res.send('usuario deletado com sucesso')
-    }
+       return res.send('deu erro aqui fi', error)
+    } 
 }
