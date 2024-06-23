@@ -37,18 +37,14 @@ exports.deleteUsuario = async (req, res) => {
 }
 
 exports.updateUsuario = async (req, res) => {
-    const idUsuario = await Usuarios.findOne({ where: {id: req.params.id }}) // encontra um usuario a partir do id
+    const ID = req.params.id
+    const idUsuario = await Usuarios.findOne({ where: {id: ID}}) // encontra um usuario a partir do id
     if (idUsuario) {
         try {
             console.log('skjckjhdjkhzdkjhdasjkd')
 
             const [Updates] = await Usuarios.update(req.body, { where: {id: req.params.id}}) // verifica se tem alguma alteração
-            
-            if (Updates > 0) {
-                const usuarioAtualizado = await Usuarios.findOne({ where: { id: idUsuario } })
-                return res.send({ message: 'Usuario foi atualizado ;P', usuariocomdadosnovos: usuarioAtualizado})
-
-            } return res.send('Usuario encontrado porém sem nenhuma alteração')
+                return res.send({ message: 'Usuario foi atualizado ;P', })
 
         } catch (error) {
             res.send('deu erro aqui parcero ==> ',  error)
