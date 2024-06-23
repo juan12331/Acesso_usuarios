@@ -4,6 +4,8 @@ const UsuariosControllers = require('../controllers/Usuarios')
 
 router.get('/usuarios', UsuariosControllers.getAll)
 router.get('/usuarios:nome', UsuariosControllers.getByName)
+router.get('/usuarios:id', UsuariosControllers.getById)
+router.get('/usuarios:email', UsuariosControllers.getByEmail)
 
 router.post('/usuarios', UsuariosControllers.createUsuario)
 router.delete('/usuarios:id', UsuariosControllers.deleteUsuario)
