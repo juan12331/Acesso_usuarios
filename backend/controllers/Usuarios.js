@@ -12,12 +12,6 @@ exports.getByName = async (req, res) => {
     res.json(usuario)
 }
 
-exports.getByEmail = async (req, res) => {
-    const usuario = await Usuarios.findOne({ where: { email: req.params.email }})
-    console.log(usuario);
-    res.json(usuario)
-}
-
 exports.getById = async (req, res) => {
     const usuario = await Usuarios.findOne({ where: { id: req.params.id }})
     console.log(usuario);
