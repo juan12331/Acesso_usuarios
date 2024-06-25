@@ -1,7 +1,7 @@
 const Usuarios = require('../models/Usuarios')
 
 exports.getAll = async (req, res) => {
-    const usuarios = await Usuarios.findAll();
+    const usuarios = await Usuarios.findAll( { limit: 10 } );
     console.log(usuarios);
     res.json(usuarios)
 }
