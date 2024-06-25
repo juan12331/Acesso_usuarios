@@ -4,6 +4,7 @@ Objetivo: fazer o CRUD usando sequelize, ligar o banco de dados com backend, lig
 
 Como inicializar:
 
- - Abra no mysql workbench um servidor com as especificações do config do backend
- - Após isso no terminal entre na pasta backend e inicialize o server usando o comando "node server.js" (precisa ter o node instalado)
- - Após isso abra outro terminal e entre na pasta frontend e de o comando "npm run dev" e segurando o crtl clique no link
+ - Abra no mysql workbench um servidor com as especificações do config do backend;
+ - Após isso no terminal entre na pasta backend e instale as dependencias usando o comando "npm i" por exemplo;
+ - Ainda sim na pasta de backend inicialize o server usando o comando "node server.js" (precisa ter o node instalado);
+ - Após isso abra outro terminal e entre na pasta frontend e de o comando para instalar as dependencias usando "npm i", por exemplo, "npm run dev" e segurando o crtl clique no link.
