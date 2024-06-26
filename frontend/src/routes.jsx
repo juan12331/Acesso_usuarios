@@ -9,10 +9,10 @@ import Login from "./pages/login_adm/login"
 function MainRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/usuarios" element={<Users />} />
-      <Route path="/criar_usuario" element={<Create/>} />
-      <Route path="/atualizar_usuario" element={<Update/>}/>      
+      <Route path="/" element={<Users />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Criar" element={<Create/>} />
+      <Route path="/Atualizar" element={<Update/>}/>      
     </Routes>
   );
 }
