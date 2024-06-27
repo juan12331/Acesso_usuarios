@@ -1,19 +1,19 @@
 const Usuarios = require('../models/Usuarios')
 
 exports.getAll = async (req, res) => {
-    const usuarios = await Usuarios.findAll( { limit: 10 } );
+    const usuarios = await Usuarios.findAll( { limit: 20 } );
     console.log(usuarios);
     res.json(usuarios)
 }
 
 exports.getByName = async (req, res) => {
-    const usuario = await Usuarios.findOne({ where: { nome: req.params.nome }})
+    const usuario = await Usuarios.findOne({ where: { nome: req.params.nome }}, { limit: 20 })
     console.log(usuario);
     res.json(usuario)
 }
 
 exports.getById = async (req, res) => {
-    const usuario = await Usuarios.findOne({ where: { id: req.params.id }})
+    const usuario = await Usuarios.findOne({ where: { id: req.params.id }}, {limit: 1})
     console.log(usuario);
     res.json(usuario)
 }
