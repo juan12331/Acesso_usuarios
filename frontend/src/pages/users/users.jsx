@@ -1,5 +1,6 @@
 import React from 'react'
 import {getFunction} from '../../services/APIservice'
+import './users.css'
 
 const users = () => {
     function getButton () {
@@ -8,8 +9,13 @@ const users = () => {
 
   return (
 
-
-            <button onClick={getButton}> GET </button>
+<>
+    <div class="pesquisar">
+    <input type="text" class="input" placeholder="pesquise usuario aqui..." />
+    <button onClick={getButton} class="button"> Pesquisar </button>
+    </div>
+</>
+            
     
   )
 }
