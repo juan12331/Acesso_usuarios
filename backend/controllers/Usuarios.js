@@ -19,7 +19,7 @@ exports.getById = async (req, res) => {
 }
 
 exports.getByEmail = async (req, res) => {
-    const usruario = await Usuarios.findOne( { where : { email: req.params.email}}, {limit: 1})
+    const usuario = await Usuarios.findOne( { where : { email: req.params.email}}, {limit: 1})
     console.log(usuario);
     res.json(usuario)
 }

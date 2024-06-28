@@ -5,6 +5,7 @@ import './users.css'
 const users = () => {
     function getButton () {
         getFunction().then( data => console.log(data)).catch(err => console.log("deu erro :("))
+        getById(1).then(data => console.log(data)).catch(err => console.log('error'))
     }
 
     
