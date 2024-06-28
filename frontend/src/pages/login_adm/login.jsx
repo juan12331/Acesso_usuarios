@@ -6,6 +6,14 @@ const login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setpassword] = useState('')
+    
+
+    function  createElement(text) {
+        let span = document.getElementById('spanXD')
+        span.innerText = text
+        
+        
+    }
 
     const autenticacao = (email, password) => {
          if (email && password) {
@@ -14,15 +22,16 @@ const login = () => {
                     if (data.senha === password) {
                         window.location.href = '/Users'
                     } else{
-                        console.log(' senha incorreta ')
+                        createElement(' senha incorreta ')
                     }
                 } else {
-                    console.log('esse usuario não tem acesso a pagina de administradores')
+                    createElement('esse usuario não tem acesso a pagina de administradores')
                 }
             } 
-            ).catch ( err => console.log('este email não esta cadastrado'))
+            ).catch ( err => createElement('este email não esta cadastrado'))
          } else{
-            console.log('preencha os dois campos')
+            createElement('*preencha os dois campos*')
+            
          }
     }
 
@@ -34,7 +43,8 @@ const login = () => {
         <span className='span'>coloque seu email e sua senha abaixo</span>
         <input type="text" id='email' className='email input' value={email} onChange={(e) => setEmail(e.target.value)}/>
         <input type="password" id='password' className='password input' value={password} onChange={(e) => setpassword(e.target.value)} />
-        <span className='span'></span>
+        <span className='span aviso' id='spanXD'></span>
+        <button className='problemas'> problemas ao logar? </button>
         <button onClick={() =>autenticacao(email, password)} className='button'> Logar</button>
         
     </div>

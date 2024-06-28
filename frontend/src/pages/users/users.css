@@ -77,3 +77,10 @@
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
   }
+
+.userCard{
+    background-color: red;
+    width: 10rem;
+    height: 1rem;
+    margin: 1px;
+}
