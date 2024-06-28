@@ -75,7 +75,7 @@ exports.updateUsuario = async (req, res) => {
     const idUsuario = await Usuarios.findOne({ where: { id: ID } }) // encontra um usuario a partir do id
     if (idUsuario) {
         try {
-            console.log('skjckjhdjkhzdkjhdasjkd')
+            console.log('test')
 
             const [Updates] = await Usuarios.update(req.body, { where: { id: req.params.id } }) // verifica se tem alguma alteração
             return res.send({ message: 'Usuario foi atualizado ;P', })
