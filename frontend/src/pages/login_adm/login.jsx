@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import {getByEmail} from '../../services/APIservice'
 import './login.css'
 
@@ -26,12 +26,11 @@ const login = () => {
          }
     }
 
-
   return (
     <div>
         <input type="text" id='email' className='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
         <input type="password" id='password' className='password' value={password} onChange={(e) => setpassword(e.target.value)} />
-        <button onClick={autenticacao(email, password)}> Logar</button>
+        <button onClick={() =>autenticacao(email, password)}> Logar</button>
     </div>
   )
 }
