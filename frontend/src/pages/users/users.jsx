@@ -10,6 +10,7 @@ const users = () => {
   function getButton() {
     getUsers({ nome: search, email: search }).then(data => {
       setUsers(data);
+      console.log(data)
     }).catch(err => console.log("deu erro :(", err))
   }
 
@@ -48,6 +49,8 @@ const users = () => {
             <div className="criado">
               {formatDate(user.createdAt)}
             </div>
+            <button value={user.id} id='delete' className='button1 delete'> Deletar </button> 
+            <button value={user.id} id='edit' className='button1 edit'> Editar </button>
           </div>
         ))}
       </div>

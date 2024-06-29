@@ -83,12 +83,6 @@ body {
   transform: translateY(2px);
 }
 
-.userCard {
-  background-color: red;
-  width: 10rem;
-  height: 1rem;
-  margin: 1px;
-}
 
 .cardWrap {
   display: flex;
@@ -106,6 +100,11 @@ body {
   text-align: center;
   background-color: #f3f3f3;
   min-width: 10rem;
+  transition-duration:0.2s ;
+}
+
+.card:hover{
+  transform: translate(0, -2.5px);
 }
 
 .card .nome {
@@ -117,3 +116,74 @@ body {
   font-size: 0.8em;
   color: #727272;
 }
+
+.button1{
+  align-items: center;
+  appearance: none;
+  background-color: #00ff62;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #00ff62 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 12px;
+  margin: 7px;
+}
+
+.edit{
+  background-color: #0044ff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0044ff 0 -3px 0 inset;
+}
+
+
+
+.edit:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+  transform: translateY(-2px);
+}
+
+.edit:active {
+  box-shadow: #00eeff 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+.delete{
+  background-color: #e90000;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #e90000 0 -3px 0 inset;
+}
+
+.delete:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+  transform: translateY(-2px);
+}
+
+.delete:active {
+  box-shadow: #000000 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
