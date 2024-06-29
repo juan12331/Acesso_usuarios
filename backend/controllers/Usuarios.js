@@ -55,6 +55,8 @@ exports.getUsersById = async (req, res) => {
 }
 
 exports.createUsuario = async (req, res) => {
+
+
     const usuarioCriado = await Usuarios.create(req.body)
     console.log(usuarioCriado)
     return res.send('usuario cadastrado com sucesso')

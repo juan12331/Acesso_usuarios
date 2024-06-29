@@ -36,6 +36,13 @@ body {
   margin: 7px;
 }
 
+.pesquisar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 
 .button:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
@@ -58,7 +65,6 @@ body {
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
   height: 1.8rem;
-  width: 80%;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -187,3 +193,6 @@ body {
 }
 
 
+@media screen {
+  
+}

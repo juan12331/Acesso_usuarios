@@ -14,6 +14,14 @@ const users = () => {
     }).catch(err => console.log("deu erro :(", err))
   }
 
+  function sair(){
+    window.location.href = '/'
+  }
+
+  function goCriar(){
+    window.location.href = '/Criar'
+  }
+
   useEffect(() => {
     getButton()
   }, [])
@@ -33,6 +41,8 @@ const users = () => {
       <div className="pesquisar">
         <input type="text" onChange={(e) => setSearch(e.target.value)} className="input" placeholder="pesquise usuario aqui..." />
         <button onClick={getButton} className="button"> Pesquisar </button>
+        <button className='delete button1' onClick={sair}> Sair </button>
+        <button className='button1 edit' onClick={goCriar}> Criar usuario </button>
       </div>
       <div className="cardWrap">
         {users.map((user) => (
