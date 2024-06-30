@@ -23,7 +23,7 @@ const create = () => {
                 <input type="text" placeholder='Email:'className='input' />
                 <input type="password" placeholder='Senha:'className='input' />
                 <input type="password" placeholder='Confirmar senha:'className='input' />
-                <button onClick={criar}>criar</button>
+                <button onClick={criar} className='button'>criar</button>
             </div>
         </div>
       
