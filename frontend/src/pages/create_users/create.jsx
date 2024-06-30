@@ -4,6 +4,8 @@ import { PostUsuario } from '../../services/APIservice';
 
 const create = () => {
 
+  const rageEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const [nome, setName] = useState('')
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
@@ -13,11 +15,15 @@ const create = () => {
   function criar() {
     if (senha != confirmar) {
       showError('senha e confirmar senha tem que estar igual')
-      return
+      return  
     }
     if( nome == '' || email == '' || senha == '' || nome == '' ){
       showError('preencha todos os campos')
-      return
+      return;
+    }
+    if (!rageEmail.test(email)) {
+      showError('Email invalido')
+      return;
     }
     PostUsuario(nome, email, senha)
     .then(data => {
