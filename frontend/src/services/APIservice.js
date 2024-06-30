@@ -1,4 +1,3 @@
-import axios from "axios";
 import http from "./http"
 
 export async function getUsers(params) {
@@ -19,5 +18,10 @@ export async function autenticacao(email, senha) {
 export async function PostUsuario (nome, email, senha ) {
     const response = await http.post(`/usuarios`, {nome: nome, email: email, senha: senha })
     console.log(response)
+    return response.data;
+}
+
+export async function DeleteUsuario (id) {
+    const response = await http.delete(`/usuarios/${id}`)
     return response.data;
 }

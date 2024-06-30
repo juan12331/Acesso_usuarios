@@ -87,8 +87,8 @@ exports.updateUsuario = async (req, res) => {
             return res.send({ message: 'Usuario foi atualizado ;P', })
 
         } catch (error) {
-            res.send('deu erro aqui parcero ==> ', error)
+            return res.send('deu erro aqui parcero ==> ', error)
         }
     }
-    res.send('Usuario não encontrado')
+    return res.send('Usuario não encontrado')
 }
