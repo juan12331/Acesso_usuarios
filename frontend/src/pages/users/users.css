@@ -135,7 +135,8 @@ body {
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
-  height: 1.5rem;
+  height:2rem;
+  width: 4rem;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -190,9 +191,4 @@ body {
 .delete:active {
   box-shadow: #000000 0 3px 7px inset;
   transform: translateY(2px);
-}
-
-
-@media screen {
-  
 }

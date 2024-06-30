@@ -9,7 +9,8 @@ const login = () => {
 
     const login = async () => {
         if (!email || !password) {
-            return;
+            showError('preencha os campos de usuario e senha')
+            return  
         }
         try {
             await autenticacao(email, password);
