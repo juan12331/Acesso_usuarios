@@ -35,7 +35,7 @@ const login = () => {
                 <h1 className='h1'>Login de usuario</h1>
                 <span className='span'>coloque seu email e sua senha abaixo</span>
                 <input type="text" id='email' placeholder='email' className='email input' value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" id='password' placeholder='email' className='password input' value={password} onChange={(e) => setpassword(e.target.value)} />
+                <input type="password" id='password' placeholder='senha' className='password input' value={password} onChange={(e) => setpassword(e.target.value)} />
                 <span className='span aviso' id='spanXD'></span>
                 <button className='problemas'> problemas ao logar? </button>
                 <button onClick={() => login(email, password)} className='button'> Logar</button>
