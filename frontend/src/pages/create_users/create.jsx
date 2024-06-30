@@ -5,6 +5,8 @@ import { PostUsuario } from '../../services/APIservice';
 const create = () => {
 
   const rageEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const rageSenha = /^(?=.*[A-Z])(?=.*\d).+$/;
+  const rageCaracter =  /^.{8,}$/;
 
   const [nome, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -24,6 +26,12 @@ const create = () => {
     if (!rageEmail.test(email)) {
       showError('Email invalido')
       return;
+    } if (!rageSenha.test(senha)) {
+      showError('Senha fraca')
+      return;
+    } if (!rageCaracter.test(senha)) {
+      showError('senha precisa no minimo de 8 caracteres')
+      return
     }
     PostUsuario(nome, email, senha)
     .then(data => {
