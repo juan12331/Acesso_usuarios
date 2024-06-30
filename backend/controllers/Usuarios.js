@@ -55,7 +55,11 @@ exports.getUsersById = async (req, res) => {
 }
 
 exports.createUsuario = async (req, res) => {
+    const verificacao = await Usuarios.findOne({ where:  { email: req.params.email}})
 
+    if (verificacao){
+        return res.send ('usuario ja foi cadastrado')
+    }
 
     const usuarioCriado = await Usuarios.create(req.body)
     console.log(usuarioCriado)

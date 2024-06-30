@@ -1,3 +1,4 @@
+import axios from "axios";
 import http from "./http"
 
 export async function getUsers(params) {
@@ -12,5 +13,11 @@ export async function getUsersById(id) {
 
 export async function autenticacao(email, senha) {
     const response = await http.post('/login', { email, senha });
+    return response.data;
+}
+
+export async function PostUsuario (nome, email, senha ) {
+    const response = await http.post(`/usuarios`, {nome: nome, email: email, senha: senha })
+    console.log(response)
     return response.data;
 }
