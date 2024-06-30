@@ -12,7 +12,7 @@ function MainRoutes() {
       <Route path="/" element={<Login />} />
       <Route path="/Users" element={<Users />} />
       <Route path="/Criar" element={<Create/>} />
-      <Route path="/Atualizar" element={<Update/>}/>      
+      <Route path="/Atualizar/:id" element={<Update/>}/>      
     </Routes>
   );
 }
