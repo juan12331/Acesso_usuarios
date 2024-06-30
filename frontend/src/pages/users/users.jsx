@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUsers } from '../../services/APIservice'
+import { getUsers, DeleteUsuario } from '../../services/APIservice'
 import './users.css'
 
 const users = () => {
@@ -34,6 +34,11 @@ const users = () => {
     return `${day}/${month}/${year}`;
   }
 
+  async function deletar(id) {
+    await DeleteUsuario(id)
+    getButton()
+  }
+
 
   return (
 
@@ -59,7 +64,7 @@ const users = () => {
             <div className="criado">
               {formatDate(user.createdAt)}
             </div>
-            <button value={user.id} id='delete' className='button1 delete'> Deletar </button> 
+            <button value={user.id} id='delete' className='button1 delete' onClick={ () =>  deletar(user.id)}> Deletar </button> 
             <button value={user.id} id='edit' className='button1 edit'> Editar </button>
           </div>
         ))}

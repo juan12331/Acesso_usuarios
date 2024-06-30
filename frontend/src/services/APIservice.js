@@ -23,5 +23,5 @@ export async function PostUsuario (nome, email, senha ) {
 
 export async function DeleteUsuario (id) {
     const response = await http.delete(`/usuarios/${id}`)
-    return response.data;
+    return;
 }

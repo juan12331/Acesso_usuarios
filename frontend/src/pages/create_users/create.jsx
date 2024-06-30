@@ -4,10 +4,9 @@ import { PostUsuario } from '../../services/APIservice';
 const create = () => {
   
   function criar() {
-    PostUsuario('jefersonDnv', 'jeferson123@gmail.com', 'password')
+    PostUsuario('jefersonDnvAgain', 'jeferson1233@gmail.com', 'password')
     .then(data => console.log(data))
     .catch(err => console.log('deu erro'))
-    console.log('test')
   }
 
   return (
