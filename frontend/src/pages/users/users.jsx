@@ -39,6 +39,9 @@ const users = () => {
     getButton()
   }
 
+  function redirecionarUpdate(id) {
+    window.location.href = `/Atualizar/${id}`
+  }
 
   return (
 
@@ -65,7 +68,7 @@ const users = () => {
               {formatDate(user.createdAt)}
             </div>
             <button value={user.id} id='delete' className='button1 delete' onClick={ () =>  deletar(user.id) }> Deletar </button> 
-            <button value={user.id} id='edit' className='button1 edit'> Editar </button>
+            <button value={user.id} id='edit' className='button1 edit' onClick={ () => redirecionarUpdate(user.id)}> Editar </button>
           </div>
         ))}
       </div>

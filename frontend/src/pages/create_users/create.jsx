@@ -27,7 +27,7 @@ const create = () => {
       showError('Email invalido')
       return;
     } if (!rageSenha.test(senha)) {
-      showError('Senha fraca')
+      showError('Senha fraca, coloque numeros e letras maiusculas')
       return;
     } if (!rageCaracter.test(senha)) {
       showError('senha precisa no minimo de 8 caracteres')

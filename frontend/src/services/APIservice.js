@@ -25,3 +25,8 @@ export async function DeleteUsuario (id) {
     const response = await http.delete(`/usuarios/${id}`)
     return;
 }
+
+export async function putUsuario (id, nome, email, senha, papel) {
+    const response = await http.put(`/usuarios/${id}`, {nome: nome, email: email, senha: senha, papel: papel})
+    return;
+}
